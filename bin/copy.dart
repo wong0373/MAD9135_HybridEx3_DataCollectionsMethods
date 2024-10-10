@@ -33,20 +33,19 @@ void main() {
   {"first":"Adam", "last":"Robillard", "email":"robilla@algonquincollege.com"}
 ]
 ''';
-
   var people = List<Map<String, String>>.from(
       jsonDecode(json).map((person) => Map<String, String>.from(person)));
 
   Students students = Students(people);
 
-  print("Initial list of students:");
+  print('Initial list of students');
   students.output();
 
-  print("\nSorting by first name:");
+  print('Sort students by:');
   students.sort('first');
   students.output();
 
-  print("\nAdding a new student:");
+  print('Add a new student:');
   students.plus({
     "first": "Terry",
     "last": "Wong",
@@ -54,7 +53,7 @@ void main() {
   });
   students.output();
 
-  print("\nRemoving a student:");
-  students.remove('first', 'Adesh');
+  print('remove a student:');
+  students.remove("first", "Adesh");
   students.output();
 }
