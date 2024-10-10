@@ -39,11 +39,13 @@ void main() {
 
   Students students = Students(people);
 
-  print("Sorting by first name");
+  print("Initial list of students:")
+
+  print("Sorting by first name:");
   students.sort('first');
   students.output();
 
-  print("Adding a new student");
+  print("Adding a new student:");
   students.plus({
     "first": "Terry",
     "last": "Wong",
@@ -51,7 +53,7 @@ void main() {
   });
   students.output();
 
-  print("Removing a student");
+  print("Removing a student:");
   students.remove('first', 'Adesh');
   students.output();
 }
