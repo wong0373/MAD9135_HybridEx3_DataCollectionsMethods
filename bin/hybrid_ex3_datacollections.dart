@@ -36,6 +36,7 @@ void main() {
 
   List<Map<String, String>> people = List<Map<String, String>>.from(
       jsonDecode(json).map((person) => Map<String, String>.from(person)));
+
   Students students = Students(people);
 
   print("Sorting by first name");
